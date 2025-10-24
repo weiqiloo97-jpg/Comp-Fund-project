@@ -1,0 +1,9 @@
+CHIP MyOr{
+  IN a,b;
+  OUT out;
+
+  PARTS:
+  Nand(a=a, b=a, out=nota); //a nand a= not a
+  Nand(a=b, b=b, out=notb); //b nand b= not b
+  Nand(a=nota, b=notb, out=out); //(not a) nand (not b)= a or b
+}
