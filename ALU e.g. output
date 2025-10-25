@@ -1,0 +1,103 @@
+1. Function: 0
+text
+Control: C4=0, C3=0, C2=0, C1=0, C0=0 (00000 = 0)
+Output: out=0 (0000000000000000), zr=1, ng=0
+
+2. Function: 1
+text
+Control: C4=0, C3=0, C2=0, C1=0, C0=1 (00001 = 1)
+Output: out=1 (0000000000000001), zr=0, ng=0
+
+3. Function: -1
+text
+Control: C4=0, C3=0, C2=0, C1=1, C0=0 (00010 = 2)
+Output: out=-1 (1111111111111111), zr=0, ng=1
+
+4. Function: x
+text
+Control: C4=0, C3=0, C2=0, C1=1, C0=1 (00011 = 3)
+Output: out=5 (0000000000000101), zr=0, ng=0
+
+5. Function: y
+text
+Control: C4=0, C3=0, C2=1, C1=0, C0=0 (00100 = 4)
+Output: out=3 (0000000000000011), zr=0, ng=0
+
+6. Function: !x (NOT x)
+text
+Control: C4=0, C3=0, C2=1, C1=0, C0=1 (00101 = 5)
+Output: out=-6 (1111111111111010), zr=0, ng=1
+
+7. Function: !y (NOT y)
+text
+Control: C4=0, C3=0, C2=1, C1=1, C0=0 (00110 = 6)
+Output: out=-4 (1111111111111100), zr=0, ng=1
+
+8. Function: -x
+text
+Control: C4=0, C3=0, C2=1, C1=1, C0=1 (00111 = 7)
+Output: out=-5 (1111111111111011), zr=0, ng=1
+
+9. Function: -y
+text
+Control: C4=0, C3=1, C2=0, C1=0, C0=0 (01000 = 8)
+Output: out=-3 (1111111111111101), zr=0, ng=1
+
+10. Function: x+1
+text
+Control: C4=0, C3=1, C2=0, C1=0, C0=1 (01001 = 9)
+Output: out=6 (0000000000000110), zr=0, ng=0
+
+11. Function: y+1
+text
+Control: C4=0, C3=1, C2=0, C1=1, C0=0 (01010 = 10)
+Output: out=4 (0000000000000100), zr=0, ng=0
+
+12. Function: x-1
+text
+Control: C4=0, C3=1, C2=0, C1=1, C0=1 (01011 = 11)
+Output: out=4 (0000000000000100), zr=0, ng=0
+
+13. Function: y-1
+text
+Control: C4=0, C3=1, C2=1, C1=0, C0=0 (01100 = 12)
+Output: out=2 (0000000000000010), zr=0, ng=0
+
+14. Function: x+y
+text
+Control: C4=0, C3=1, C2=1, C1=0, C0=1 (01101 = 13)
+Output: out=8 (0000000000001000), zr=0, ng=0
+
+15. Function: x-y
+text
+Control: C4=1, C3=0, C2=0, C1=0, C0=0 (10000 = 16)
+Output: out=2 (0000000000000010), zr=0, ng=0
+
+16. Function: y-x
+text
+Control: C4=1, C3=0, C2=0, C1=0, C0=1 (10001 = 17)
+Output: out=-2 (1111111111111110), zr=0, ng=1
+
+17. Function: x&y (AND)
+text
+Control: C4=1, C3=0, C2=0, C1=1, C0=0 (10010 = 18)
+x=0101, y=0011 → AND=0001
+Output: out=1 (0000000000000001), zr=0, ng=0
+
+18. Function: x|y (OR)
+text
+Control: C4=1, C3=0, C2=0, C1=1, C0=1 (10011 = 19)
+x=0101, y=0011 → OR=0111
+Output: out=7 (0000000000000111), zr=0, ng=0
+
+19. Function: x XOR y
+text
+Control: C4=1, C3=0, C2=1, C1=0, C0=0 (10100 = 20)
+x=0101, y=0011 → XOR=0110
+Output: out=6 (0000000000000110), zr=0, ng=0
+
+20. Function: x XNOR y
+text
+Control: C4=1, C3=0, C2=1, C1=0, C0=1 (10101 = 21)
+x=0101, y=0011 → XNOR=1001 → -7 in two's complement
+Output: out=-7 (1111111111111001), zr=0, ng=1
